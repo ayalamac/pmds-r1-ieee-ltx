@@ -20,13 +20,13 @@
 
 \author{Sara~Herrera, Andrés~Ayala, Julio~Franco y Martín~Villegas, \textit{Universidad EAFIT}}
 
-\markboth{EAFITPMDS, Reto #1, Febrero~2024}%
+\markboth{Reto \#1. 202401 Procesos Modernos de Desarrollo de Software, Febrero~2024}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 
 \maketitle
 
 \begin{abstract}
-This paper delves into the adaptation of agile and structured methodologies for software development in the Machine Learning (ML) domain, focusing on the successful integration of CRISP-DM. Through detailed analysis, we identify how iteration, collaboration, and a focus on robust design and architecture principles can overcome the unique challenges presented by ML. We propose a series of methodological improvements and development practices that demonstrate improved efficiency and greater adaptability to changes in requirements and data. Our findings reveal critical strategies for implementing scalable, efficient, and reproducible ML solutions, offering valuable insights for researchers and practitioners alike.
+This paper delves into the adaptation of agile and structured methodologies for software development in the \textit{Machine Learning} (ML) domain, focusing on the successful integration of CRISP-DM. Through detailed analysis, we identify how iteration, collaboration, and a focus on robust design and architecture principles can overcome the unique challenges presented by ML. We propose a series of methodological improvements and development practices that demonstrate improved efficiency and greater adaptability to changes in requirements and data. Our findings reveal critical strategies for implementing scalable, efficient, and reproducible ML solutions, offering valuable insights for researchers and practitioners alike.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -52,7 +52,7 @@ Los avances de la computación en la nube y el continuo lanzamiento de nuevas te
 
 \section{Selección de enfoque CRISP-DM}
 
-CRISP-DM \textit{(Cross-Industry Standard Process for Data Mining)} es un modelo de proceso robusto y bien establecido que proporciona una estructura detallada para llevar a cabo proyectos de minería de datos y Machine Learning. Desarrollado por un consorcio de empresas con el objetivo de estandarizar la forma en que se abordan los proyectos de datos, CRISP-DM ha demostrado ser flexible y aplicable en diversos contextos de industria y negocio \cite{datasciencepmWhatCRISP}.\\
+CRISP-DM \textit{(Cross-Industry Standard Process for Data Mining)} es un modelo de proceso robusto y bien establecido que proporciona una estructura detallada para llevar a cabo proyectos de minería de datos y \textit{Machine Learning}. Desarrollado por un consorcio de empresas con el objetivo de estandarizar la forma en que se abordan los proyectos de datos, CRISP-DM ha demostrado ser flexible y aplicable en diversos contextos de industria y negocio \cite{datasciencepmWhatCRISP}.\\
 
 La elección de la metodología CRISP-DM como base para trabajar proyectos de ML se fundamenta en ser el marco de trabajo más apropiado para desarrollar un proyecto de \textit{data mining}, etapa crucial de proyectos que involucran grandes volúmentes de datos. Si bien CRISP-DM es bastante conocido para abordar este tipo de problemas de ML, también se integra con enfoques ágiles para permitir una mayor flexibilidad y respuesta rápida a los cambios \cite{datasciencepmWhatCRISP}. Esto es particularmente útil en ML, donde los modelos pueden necesitar ser reentrenados y ajustados continuamente a medida que se dispone de nuevos datos.\\
 
@@ -80,7 +80,7 @@ La Figura \ref{fig:cripsDM}, ilustra el flujo de trabajo en el enfoque CRISP-DM,
 
 Las técnicas y herramientas propuestas en CRISP-DM son variadas y dependen de la fase del proceso. Por ejemplo, para la comprensión de los datos y la preparación, se pueden utilizar herramientas de análisis exploratorio como Python con bibliotecas como Pandas y Matplotlib, o entornos de software como R. Para el modelado, se utilizan herramientas y plataformas que soportan algoritmos de ML como scikit-learn, TensorFlow, y Keras. Para el despliegue, se pueden emplear soluciones de contenedores como Docker y plataformas de orquestación como Kubernetes, así como servicios en la nube como AWS, Google Cloud o Azure que ofrecen capacidades de ML como servicio.\\
 
-En cuanto a los lenguajes de modelado, CRISP-DM es agnóstico en términos de lenguajes de programación, pero en la práctica, Python y R son los más utilizados debido a su amplia gama de librerías y frameworks orientados a la ciencia de datos y ML. Además, los lenguajes de modelado específicos como UML (Unified Modeling Language) pueden ser útiles en la fase de comprensión del negocio para modelar los procesos y los requisitos.\\
+En cuanto a los lenguajes de modelado, CRISP-DM es agnóstico en términos de lenguajes de programación, pero en la práctica, Python y R son los más utilizados debido a su amplia gama de librerías y \textit{frameworks} orientados a la ciencia de datos y ML. Además, los lenguajes de modelado específicos como UML (\textit{Unified Modeling Language}) pueden ser útiles en la fase de comprensión del negocio para modelar los procesos y los requisitos.\\
 
 Los métodos utilizados en CRISP-DM abarcan desde técnicas estadísticas y matemáticas para la evaluación y el modelado, hasta métodos de gestión de proyectos para la planificación y el despliegue. Se hace hincapié en métodos iterativos y flexibles que permiten la adaptación y la mejora continua del modelo y del proceso de desarrollo del software.\\
 
@@ -90,28 +90,28 @@ La siguiente propuesta esta fundamentada en el trabajo expuesto en \cite{Cret201
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/espina.png}
-    \caption{Caption}
+    \includegraphics[width=0.52\textwidth]{img/espina.png}
+    \caption{Perspectiva global de los modelos de procesos \cite{Cret2013}.}
     \label{fig:espina}
 \end{figure}
 
 \subsection{Ciclo}
 
-Para un dominio como Machine Learning, un modelo iterativo de manera local, regional y global con ciclos cortos (1-3 meses) es esencial debido a la naturaleza experimental y evolutiva de la construcción de modelos. Repetir un conjunto de tareas de diseño, desarrollo y evaluación permite ajustar y mejorar continuamente los modelos tal como lo expone el enfoque.\\
+Para un dominio como \textit{Machine Learning}, un modelo iterativo de manera local, regional y global con ciclos cortos (1-3 meses) es esencial debido a la naturaleza experimental y evolutiva de la construcción de modelos. Repetir un conjunto de tareas de diseño, desarrollo y evaluación permite ajustar y mejorar continuamente los modelos tal como lo expone el enfoque.\\
 
 Se propone además un ciclo que permita iterar en etapas anteriores según la necesidad sin una definición concreta para su realización, dando flexibilidad en dichos escenarios.\\
 
-La identificación y el orden de las etapas son cruciales en el desarrollo de software para Machine Learning, donde cada actividad --como la preparación de datos o la selección de algoritmos-- es fundamental. La paralelización de etapas no es aconsejable debido a la naturaleza de pasos sistemáticos del dominio junto con un modelo orientado a las actividades, se asegura que todos los aspectos críticos del desarrollo de ML sean abordados sistemáticamente, en línea con la fase de comprensión del negocio y los datos.\\
+La identificación y el orden de las etapas son cruciales en el desarrollo de software para \textit{Machine Learning}, donde cada actividad --como la preparación de datos o la selección de algoritmos-- es fundamental. La paralelización de etapas no es aconsejable debido a la naturaleza de pasos sistemáticos del dominio junto con un modelo orientado a las actividades, se asegura que todos los aspectos críticos del desarrollo de ML sean abordados sistemáticamente, en línea con la fase de comprensión del negocio y los datos.\\
 
 \subsection{Colaboración} \label{colaboracion}
 
-La colaboración interna en equipos de características multifuncionales y/o jerárquicas es vital para afrontar la complejidad del Machine Learning, donde diferentes habilidades y conocimientos deben converger para crear soluciones efectivas. Se proponen los roles Data Analyst (DA), Business Analyst (BA), Data Scientist (DS), Machine Learning Engineer (MLE), Product Owner (PO). Haciendo especial referencia que aunque la figura de la estructura base \cite{Cret2013} separe en colaboración interna/externa, el equipo propuesto no separa los roles ya que todos convergen a un mismo objetivo. Esto se alinea con la estructura propuesta por CRISP-DM, que requiere colaboración y coordinación entre expertos en negocios, datos y modelado.\\
+La colaboración interna en equipos de características multifuncionales y/o jerárquicas es vital para afrontar la complejidad del \textit{Machine Learning}, donde diferentes habilidades y conocimientos deben converger para crear soluciones efectivas. Se proponen los roles \textit{Data Analyst} (DA), \textit{Business Analyst} (BA), \textit{Data Scientist} (DS), \textit{Machine Learning Engineer} (MLE), \textit{Product Owner} (PO). Haciendo especial referencia que aunque la figura de la estructura base \cite{Cret2013} separe en colaboración interna/externa, el equipo propuesto no separa los roles ya que todos convergen a un mismo objetivo. Esto se alinea con la estructura propuesta por CRISP-DM, que requiere colaboración y coordinación entre expertos en negocios, datos y modelado.\\
 
 El diseño centrado en el usuario y en el uso garantiza que las soluciones de Machine Learning cumplan con las necesidades y expectativas del usuario final y su funcionalidad en el ámbito requerido.
 
 \subsection{Artefactos}
 
-En el contexto de Machine Learning, los equipos se encuentran con diferentes artefactos internos para el correcto seguimiento del progreso y entrega continua. Los artefactos no ejecutables como los análisis de riesgo y los modelos son cruciales durante las iteraciones. Estos documentos sirven como registros vitales para entender la evolución del proyecto.\\
+En el contexto de \textit{Machine Learning}, los equipos se encuentran con diferentes artefactos internos para el correcto seguimiento del progreso y entrega continua. Los artefactos no ejecutables como los análisis de riesgo y los modelos son cruciales durante las iteraciones. Estos documentos sirven como registros vitales para entender la evolución del proyecto.\\
 
 La formalización de artefactos asegura la claridad y la consistencia en la comunicación del proyecto. Sin embargo, dado que el ML es tan amplio en sus aplicaciones se sugiere una formalización semi-formal para sus ejecutables e informal en sus no ejecutables y así promover una mejor comprensión de los artefactos y su trazabilidad.\\
 
@@ -119,9 +119,9 @@ Para sus artefactos entregables ejecutables al usuario se tiene un modelo final 
 
 \subsection{Uso recomendado}
 
-El esquema propuesto para la metodología se recomienda para proyectos de tamaño medio-largo conformado por equipos pequeños (6-10 personas) dada la complejidad e incertidumbre que conlleva un proyecto de Machine Learning y el entrenamiento de modelos como salida final. Siguiendo el enfoque escogido y buscando facilidades para los equipos, se recomienda definir algunos procedimientos para evaluación de riesgos y cambios de requerimientos a lo largo del desarrollo, este modelo se define para aplicaciones con modelos de ML con alto insumo de data y consumo de imágenes.\\
+El esquema propuesto para la metodología se recomienda para proyectos de tamaño medio-largo conformado por equipos pequeños (6-10 personas) dada la complejidad e incertidumbre que conlleva un proyecto de \textit{Machine Learning} y el entrenamiento de modelos como salida final. Siguiendo el enfoque escogido y buscando facilidades para los equipos, se recomienda definir algunos procedimientos para evaluación de riesgos y cambios de requerimientos a lo largo del desarrollo, este modelo se define para aplicaciones con modelos de ML con alto insumo de data y consumo de imágenes.\\
 
-La experiencia del equipo es importante en ML debido a la complejidad técnica y la necesidad de innovación. Métodos que reconocen la importancia de contar con expertos o líderes experimentados se alinean bien con la necesidad de liderazgo y conocimiento especializado en todas las fases. En caso de no contar con la posibilidad de todo un equipo con una alta experticia, se recomienda el uso de trabajo en pares para los roles del área técnica propuestos en la sección \ref{colaboracion}.\\
+La experiencia del equipo es importante en ML debido a la complejidad técnica y la necesidad de innovación. Métodos que reconocen la importancia de contar con expertos o líderes experimentados se alinean bien con la necesidad de liderazgo y conocimiento especializado en todas las fases. En caso de no contar con la posibilidad de todo un equipo con una alta experiencia, se recomienda el uso de trabajo en pares para los roles del área técnica propuestos en la sección \ref{colaboracion}.\\
 
 \subsection{Madurez}
 
@@ -134,12 +134,10 @@ La adaptabilidad de la metodología a las necesidades específicas del proyecto 
 Esta forma de trabajo se puede detallar en un documento completo con varios aspectos o detalles específicos sobre algunos algoritmos normalmente usados en ML y aspectos complementarios del método CRISP-DM.\\
 
 \section{Conclusiones}
-En conclusión, este trabajo subraya la importancia crítica de elegir y adaptar metodologías de desarrollo de software que se ajusten a la naturaleza dinámica y compleja del Machine Learning. Las contribuciones clave incluyen la validación de CRISP-DM como un marco efectivo cuando se complementa con prácticas ágiles, y la identificación de estrategias para mejorar la colaboración multidisciplinaria y la adaptabilidad del proceso de desarrollo. Las limitaciones de nuestro estudio sugieren áreas para futuras investigaciones, particularmente en la exploración de métodos para integrar más profundamente la retroalimentación del usuario final en el ciclo de vida del desarrollo de ML. Recomendamos que futuros trabajos consideren el impacto de las tecnologías emergentes en la adaptación de metodologías de desarrollo de software para ML, con el objetivo de fomentar la innovación y mejorar la toma de decisiones basada en datos.
+En conclusión, este trabajo subraya la importancia crítica de elegir y adaptar metodologías de desarrollo de software que se ajusten a la naturaleza dinámica y compleja del \textit{Machine Learning}. Las contribuciones clave incluyen la validación de CRISP-DM como un marco efectivo cuando se complementa con prácticas ágiles, y la identificación de estrategias para mejorar la colaboración multidisciplinaria y la adaptabilidad del proceso de desarrollo. Las limitaciones de nuestro estudio sugieren áreas para futuras investigaciones, particularmente en la exploración de métodos para integrar más profundamente la retroalimentación del usuario final en el ciclo de vida del desarrollo de ML. Recomendamos que futuros trabajos consideren el impacto de las tecnologías emergentes en la adaptación de metodologías de desarrollo de software para ML, con el objetivo de fomentar la innovación y mejorar la toma de decisiones basada en datos.
 
 
 \bibliographystyle{IEEEtran}
 \bibliography{bibtex/bib/IEEEexample}
 
 \end{document}
-
-
